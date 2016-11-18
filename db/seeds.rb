@@ -1,11 +1,43 @@
 
-
-40.times do
-  first_name = Faker::Name.first_name
-  last_name = Faker::Name.last_name
-
-  Contact.create(first_name: first_name,
-                 last_name: last_name,
-                 email: "#{first_name.first}.#{last_name}@gmail.com",
-                 phone: Faker::PhoneNumber.phone_number)
-end
+Contact.create!([
+  {first_name: "Prince", last_name: "Williamson", email: "P.Williamson@gmail.com", phone: "(133) 874-5681 x82650"},
+  {first_name: "Santina", last_name: "Crooks", email: "S.Crooks@gmail.com", phone: "1-497-006-2586"},
+  {first_name: "Trycia", last_name: "Bartoletti", email: "T.Bartoletti@gmail.com", phone: "891.561.3173 x12255"},
+  {first_name: "Sophie", last_name: "Murphy", email: "S.Murphy@gmail.com", phone: "1-705-225-8102"},
+  {first_name: "Natalie", last_name: "Kuhic", email: "N.Kuhic@gmail.com", phone: "473-326-6779"},
+  {first_name: "Kavon", last_name: "Johnson", email: "K.Johnson@gmail.com", phone: "179.674.5254 x8398"},
+  {first_name: "Johathan", last_name: "Cartwright", email: "J.Cartwright@gmail.com", phone: "889.792.0398 x91069"},
+  {first_name: "Reuben", last_name: "Rempel", email: "R.Rempel@gmail.com", phone: "1-527-117-3608 x875"},
+  {first_name: "Myra", last_name: "D'Amore", email: "M.D'Amore@gmail.com", phone: "298-206-1769"},
+  {first_name: "Heber", last_name: "Pollich", email: "H.Pollich@gmail.com", phone: "922-275-4322"},
+  {first_name: "Glenda", last_name: "Braun", email: "G.Braun@gmail.com", phone: "(816) 814-6999 x6596"},
+  {first_name: "Fermin", last_name: "Lesch", email: "F.Lesch@gmail.com", phone: "236.906.5706 x7050"},
+  {first_name: "Noelia", last_name: "Medhurst", email: "N.Medhurst@gmail.com", phone: "450.818.6186"},
+  {first_name: "Cristian", last_name: "Hayes", email: "C.Hayes@gmail.com", phone: "292-301-7539 x434"},
+  {first_name: "Rae", last_name: "Dooley", email: "R.Dooley@gmail.com", phone: "335-898-5655"},
+  {first_name: "Erik", last_name: "Wiza", email: "E.Wiza@gmail.com", phone: "1-574-964-9548 x66007"},
+  {first_name: "Erwin", last_name: "Crist", email: "E.Crist@gmail.com", phone: "677.250.1030 x37368"},
+  {first_name: "Mikayla", last_name: "Hamill", email: "M.Hamill@gmail.com", phone: "1-267-519-7767 x77290"},
+  {first_name: "Genesis", last_name: "Donnelly", email: "G.Donnelly@gmail.com", phone: "(533) 440-1833 x6723"},
+  {first_name: "Jamir", last_name: "Balistreri", email: "J.Balistreri@gmail.com", phone: "756.118.6743"},
+  {first_name: "Gaylord", last_name: "Hansen", email: "G.Hansen@gmail.com", phone: "1-998-023-9176 x0341"},
+  {first_name: "Matteo", last_name: "Nader", email: "M.Nader@gmail.com", phone: "795.241.3632 x8624"},
+  {first_name: "Eliane", last_name: "Kunde", email: "E.Kunde@gmail.com", phone: "852-790-5611 x8182"},
+  {first_name: "Tessie", last_name: "Bauch", email: "T.Bauch@gmail.com", phone: "(472) 485-1218"},
+  {first_name: "Brooklyn", last_name: "Romaguera", email: "B.Romaguera@gmail.com", phone: "1-113-565-2069 x8330"},
+  {first_name: "Cassie", last_name: "McGlynn", email: "C.McGlynn@gmail.com", phone: "139.968.3180 x195"},
+  {first_name: "Janessa", last_name: "Hayes", email: "J.Hayes@gmail.com", phone: "967-183-3745"},
+  {first_name: "Marina", last_name: "Spencer", email: "M.Spencer@gmail.com", phone: "1-401-923-0008"},
+  {first_name: "Valentina", last_name: "Jakubowski", email: "V.Jakubowski@gmail.com", phone: "(198) 073-7312"},
+  {first_name: "Kane", last_name: "Bode", email: "K.Bode@gmail.com", phone: "826-438-2923"},
+  {first_name: "Rozella", last_name: "Gerhold", email: "R.Gerhold@gmail.com", phone: "1-868-785-0707 x321"},
+  {first_name: "Abbey", last_name: "Romaguera", email: "A.Romaguera@gmail.com", phone: "(559) 636-6698 x493"},
+  {first_name: "Allene", last_name: "Gaylord", email: "A.Gaylord@gmail.com", phone: "179-782-4687"},
+  {first_name: "Ora", last_name: "Zieme", email: "O.Zieme@gmail.com", phone: "1-853-801-6827"},
+  {first_name: "Rhoda", last_name: "Prosacco", email: "R.Prosacco@gmail.com", phone: "542.655.5627 x09702"},
+  {first_name: "Luigi", last_name: "Nolan", email: "L.Nolan@gmail.com", phone: "195-559-7987 x1252"},
+  {first_name: "Esta", last_name: "McCullough", email: "E.McCullough@gmail.com", phone: "1-292-219-1184"},
+  {first_name: "Garland", last_name: "Smith", email: "G.Smith@gmail.com", phone: "1-366-027-0585 x266"},
+  {first_name: "Gus", last_name: "Mayer", email: "G.Mayer@gmail.com", phone: "1-366-314-9293"},
+  {first_name: "Marietta", last_name: "Bashirian", email: "M.Bashirian@gmail.com", phone: "288-572-6082"}
+])

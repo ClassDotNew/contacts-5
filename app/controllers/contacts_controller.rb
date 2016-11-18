@@ -11,7 +11,15 @@ class ContactsController < ApplicationController
     end
 
     def create
-      @contact = Contact.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], phone: params[:phone])
+      coordinates = Geocoder.coordinates(params["address"])
+      @contact = Contact.create(
+        first_name: params[:first_name],
+        last_name: params[:last_name],
+        email: params[:email],
+        phone: params[:phone],
+        latitude: coordinates[0],
+        longitude: coordinates[1]
+      )
       flash[:success] = "Contact created."
       redirect_to "/contacts/#{@contact.id}"
     end
@@ -32,5 +40,9 @@ class ContactsController < ApplicationController
       @contact.destroy
       flash[:success] = "Contact deleted."
       redirect_to "/"
+    end
+
+    def johns
+      render 'johns.html.erb'
     end
 end

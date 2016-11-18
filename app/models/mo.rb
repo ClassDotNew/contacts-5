@@ -1,0 +1,2 @@
+class Mo < ApplicationRecord
+end

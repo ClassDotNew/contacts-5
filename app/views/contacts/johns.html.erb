@@ -1,0 +1,8 @@
+<h1>Here are all the contacts named John:</h1>
+<% all_johns = Contact.all_johns %>
+<% all_johns.each do |john| %>
+<p class="card">First Name: <%= john.first_name %></p>
+  <p>Last Name: <%= john.last_name %></p>
+  <p>Email: <%= john.email %></p>
+  <p>Phone #: <%= john.phone %></p>
+<% end %>
