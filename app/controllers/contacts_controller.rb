@@ -1,11 +1,20 @@
 class ContactsController < ApplicationController
   def index
-      @contacts = Contact.all
+    if current_user
+      @contacts = current_user.contacts
+    else
+      redirect_to '/login'
     end
+  end
 
-    def show
+
+  def show
+    if current_user
       @contact = Contact.find_by(id: params[:id])
+    else
+      redirect_to '/login'
     end
+  end
 
     def new
     end
@@ -18,7 +27,8 @@ class ContactsController < ApplicationController
         email: params[:email],
         phone: params[:phone],
         latitude: coordinates[0],
-        longitude: coordinates[1]
+        longitude: coordinates[1],
+        user_id: current_user.id
       )
       flash[:success] = "Contact created."
       redirect_to "/contacts/#{@contact.id}"
