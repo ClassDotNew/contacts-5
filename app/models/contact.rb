@@ -1,7 +1,9 @@
 class Contact < ApplicationRecord
   # belongs_to :company
-  has_many :images
+
   belongs_to :user
+  has_many :images
+
   def pretty_update
     updated_at.strftime("%A, %b %d")
   end
