@@ -1,7 +1,8 @@
 class ContactsController < ApplicationController
   def index
       @contacts = Contact.all
-    end
+      @contacts = current_user.contacts
+  end
 
     def show
       @contact = Contact.find_by(id: params[:id])
